@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports & Welfare Society - RSC (Uva) | Arugam Bay Trip 2026</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Prevent mobile double-tap zoom & optimize touch response */
+    button, input, select {
+      touch-action: manipulation;
+    }
+
+    /* Ensure iOS doesn't auto-zoom when focusing inputs */
+    @media (max-width: 640px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    @media print {
+      body * { visibility: hidden; }
+      #ticket-modal-card, #ticket-modal-card * { visibility: visible; }
+      #ticket-modal-card {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none !important;
+      }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-sky-500 selection:text-white pb-24 md:pb-8">
+
+  <!-- Top Navigation -->
+  <nav class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo & Organization -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <div class="h-9 w-9 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-tr from-sky-500 to-teal-400 flex items-center justify-center text-slate-950 font-bold shadow-md shadow-sky-500/20 shrink-0">
+            <i data-lucide="waves" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div>
+            <h1 class="text-xs sm:text-base font-extrabold tracking-tight text-white leading-tight font-display">
+              SPORTS &amp; WELFARE SOCIETY
+            </h1>
+            <p class="text-[11px] sm:text-xs font-semibold text-sky-400 flex items-center gap-1.5">
+              <span>RSC (Uva)</span>
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+              <span class="text-slate-400">Arugam Bay 2026</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Quick Status -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button type="button" onclick="openAdminModal()" class="inline-flex items-center gap-1.5 text-xs font-bold bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg shadow-sm transition-all active:scale-95" id="navAdminBtn">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span id="navAdminLabel">Admin</span>
+          </button>
+          <a href="#bus-section" class="inline-flex sm:hidden items-center gap-1 text-xs font-bold bg-slate-800 text-sky-400 border border-slate-700 px-2.5 py-1.5 rounded-lg active:scale-95 transition-all">
+            <i data-lucide="bus" class="w-3.5 h-3.5"></i>
+            Bus Seats
+          </a>
+          <a href="#bookingFormCard" class="inline-flex items-center gap-1 text-xs sm:text-sm font-bold bg-sky-600 hover:bg-sky-500 text-white px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg shadow-sm transition-all hover:shadow-md hover:shadow-sky-500/20 active:scale-95">
+            <i data-lucide="ticket" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-b border-slate-800 py-6 sm:py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
+        <div class="lg:col-span-8 space-y-3">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-300 text-[11px] sm:text-xs font-semibold uppercase tracking-wider">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 text-sky-400"></i>
+            Sunday, October 11, 2026
+          </div>
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight font-display">
+            Arugam Bay Annual Tour
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-base max-w-2xl leading-relaxed">
+            Reserve your seat on our luxury 58-passenger bus. Choose your seat below and sync directly to our official Google Sheet manifest.
+          </p>
+
+          <!-- Inclusions Highlights -->
+          <div class="pt-1 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs">
+            <span class="inline-flex items-center gap-1 bg-slate-800/90 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-slate-700 text-slate-200">
+              <i data-lucide="bus" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-sky-400"></i> Luxury Transport
+            </span>
+            <span class="inline-flex items-center gap-1 bg-slate-800/90 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-slate-700 text-slate-200">
+              <i data-lucide="coffee" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400"></i> Breakfast
+            </span>
+            <span class="inline-flex items-center gap-1 bg-slate-800/90 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-slate-700 text-slate-200">
+              <i data-lucide="utensils" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400"></i> Lunch
+            </span>
+            <span class="inline-flex items-center gap-1 bg-slate-800/90 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-slate-700 text-slate-200">
+              <i data-lucide="soup" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400"></i> Dinner
+            </span>
+          </div>
+
+          <!-- Boarding Schedule -->
+          <div class="pt-1">
+            <div class="bg-sky-950/40 border border-sky-800/50 rounded-2xl p-3 text-xs text-slate-300">
+              <div class="flex items-center justify-between mb-2">
+                <span class="flex items-center gap-1.5 font-bold text-sky-400 uppercase tracking-wider text-[11px]">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  4 Boarding Locations
+                </span>
+                <span class="text-[10px] text-amber-300 font-medium">Starts 5:00 AM</span>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 text-center text-[11px]">
+                <div class="bg-slate-900/90 border border-slate-800 rounded-xl py-1.5 px-2">
+                  <span class="block text-slate-400 text-[10px]">Stop 1</span>
+                  <strong class="text-white font-semibold block truncate">Bandarawela</strong>
+                  <span class="text-amber-400 block text-[10px] font-mono font-bold">5:00 AM</span>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-xl py-1.5 px-2">
+                  <span class="block text-slate-400 text-[10px]">Stop 2</span>
+                  <strong class="text-white font-semibold block truncate">Kumbalwela</strong>
+                  <span class="text-amber-400 block text-[10px] font-mono font-bold">5:15 AM</span>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-xl py-1.5 px-2">
+                  <span class="block text-slate-400 text-[10px]">Stop 3</span>
+                  <strong class="text-white font-semibold block truncate">Ella</strong>
+                  <span class="text-amber-400 block text-[10px] font-mono font-bold">5:20 AM</span>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-xl py-1.5 px-2">
+                  <span class="block text-slate-400 text-[10px]">Stop 4</span>
+                  <strong class="text-white font-semibold block truncate">Wellawaya</strong>
+                  <span class="text-amber-400 block text-[10px] font-mono font-bold">5:45 AM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Tour Itinerary (Mobile Collapsible to save screen space) -->
+          <div class="pt-1">
+            <details class="group bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden text-xs">
+              <summary class="flex items-center justify-between p-3 cursor-pointer select-none font-bold text-amber-400 uppercase tracking-wider text-[11px] hover:bg-slate-800/50 transition-colors">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+                  Complete Trip Itinerary (8 Stops)
+                </span>
+                <span class="flex items-center gap-1.5 text-[10px] text-slate-400 font-normal group-open:rotate-180 transition-transform">
+                  <span class="hidden sm:inline">Tap to view</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </span>
+              </summary>
+              <div class="p-3 pt-0 border-t border-slate-800/80 mt-1">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">01</span>
+                      <span class="font-mono text-amber-300 font-semibold">5:00 AM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Departure</strong>
+                    <span class="text-[10px] text-slate-400">Bandarawela &amp; pick-ups</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">02</span>
+                      <span class="font-mono text-amber-300 font-semibold">7:30 AM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Breakfast</strong>
+                    <span class="text-[10px] text-slate-400">Siyambalanduwa</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">03</span>
+                      <span class="font-mono text-amber-300 font-semibold">8:15 AM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Departure</strong>
+                    <span class="text-[10px] text-slate-400">From Siyambalanduwa</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">04</span>
+                      <span class="font-mono text-amber-300 font-semibold">9:45 AM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Muhudu Maha Viharaya</strong>
+                    <span class="text-[10px] text-slate-400">Historical Visit</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">05</span>
+                      <span class="font-mono text-amber-300 font-semibold">11:00 AM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Ulla Beach</strong>
+                    <span class="text-[10px] text-slate-400">Beach &amp; Leisure</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">06</span>
+                      <span class="font-mono text-amber-300 font-semibold">1:30 PM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Lunch</strong>
+                    <span class="text-[10px] text-slate-400">Buffet Meal</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">07</span>
+                      <span class="font-mono text-amber-300 font-semibold">3:00 PM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Departure</strong>
+                    <span class="text-[10px] text-slate-400">From Arugam Bay</span>
+                  </div>
+
+                  <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-2.5">
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                      <span class="font-bold text-sky-400">08</span>
+                      <span class="font-mono text-amber-300 font-semibold">6:00 PM</span>
+                    </div>
+                    <strong class="text-white font-semibold block text-[11px] leading-tight">Dinner</strong>
+                    <span class="text-[10px] text-slate-400">At Siyambalanduwa</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-2.5 sm:gap-3">
+          <div class="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-3.5 sm:p-4 text-center">
+            <span class="text-[10px] uppercase font-bold text-sky-400 tracking-wider block">1. Member &amp; Family</span>
+            <div class="text-xl sm:text-2xl font-black text-white mt-0.5 sm:mt-1">LKR 2,500</div>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Per Seat (All Meals)</span>
+          </div>
+          <div class="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-3.5 sm:p-4 text-center">
+            <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider block">2. Non-Member</span>
+            <div class="text-xl sm:text-2xl font-black text-white mt-0.5 sm:mt-1">LKR 3,000</div>
+            <span class="text-[10px] text-slate-400 block mt-0.5">Per Seat (All Meals)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+      
+      <!-- LEFT COLUMN: Bus Diagram & Live Manifest -->
+      <div class="lg:col-span-7 space-y-6" id="bus-section">
+        
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-3.5 sm:p-6 shadow-xl">
+          
+          <div class="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-800">
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-1.5 sm:gap-2">
+                <i data-lucide="layout-grid" class="w-4 h-4 sm:w-5 sm:h-5 text-sky-400"></i>
+                <span>Bus Seating Layout</span>
+              </h3>
+              <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Tap green seats to select. Seats 53, 54, 55 are reserved for Committee.</p>
+            </div>
+            
+            <div id="deck-stats" class="text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 shrink-0">
+              55/58 Seats Free
+            </div>
+          </div>
+
+          <!-- Legend Bar (Mobile-friendly wrap) -->
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-2 sm:gap-5 bg-slate-950/70 p-2.5 sm:p-3 rounded-2xl border border-slate-800/80 text-[11px] sm:text-xs font-medium mb-4 sm:mb-6">
+            <div class="flex items-center gap-1.5">
+              <div class="w-4 h-4 sm:w-5 sm:h-5 rounded-md bg-emerald-600 border border-emerald-500 flex items-center justify-center text-[9px] font-bold text-white">✓</div>
+              <span class="text-slate-300">Available</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <div class="w-4 h-4 sm:w-5 sm:h-5 rounded-md bg-sky-500 border border-sky-400 flex items-center justify-center text-[9px] font-bold text-slate-950">✓</div>
+              <span class="text-sky-300 font-bold">Selected</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <div class="w-4 h-4 sm:w-5 sm:h-5 rounded-md bg-amber-500 border border-amber-400 flex items-center justify-center text-[9px] font-bold text-slate-950">★</div>
+              <span class="text-amber-300">Committee (53-55)</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <div class="w-4 h-4 sm:w-5 sm:h-5 rounded-md bg-slate-700 border border-slate-600 flex items-center justify-center text-[9px] font-bold text-slate-400">✕</div>
+              <span class="text-slate-400">Booked</span>
+            </div>
+          </div>
+
+          <!-- Bus Frame (Optimized width & touch sizing for mobile) -->
+          <div class="max-w-[360px] sm:max-w-md mx-auto bg-slate-950 border-2 border-slate-800 rounded-[32px] sm:rounded-[38px] p-3 sm:p-4 shadow-inner relative">
+            
+            <!-- Windshield & Driver Area -->
+            <div class="bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/80 rounded-2xl p-2.5 sm:p-3 mb-4 sm:mb-5 flex items-center justify-between text-xs text-slate-400">
+              <div class="flex items-center gap-1.5 font-bold text-sky-400 tracking-wider text-[11px] sm:text-xs">
+                <i data-lucide="arrow-up" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                <span>FRONT / DOOR</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700 text-white font-bold text-xs">
+                <span>Driver</span>
+                <span class="text-sm">🛞</span>
+              </div>
+            </div>
+
+            <!-- Bus Seat Grid Container (Rows 1 to 12) -->
+            <div id="bus-seat-layout" class="space-y-2">
+              <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Bus Rear Back Section -->
+            <div class="mt-4 pt-2.5 border-t border-dashed border-slate-800 text-center text-[10px] sm:text-[11px] text-slate-500 uppercase font-semibold tracking-wider">
+              Emergency Exit &bull; Rear Deck
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Live Confirmed Passengers Manifest Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 sm:p-5 shadow-xl">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+              <i data-lucide="clipboard-list" class="w-4 h-4 text-sky-400"></i>
+              <span>Live Passenger Manifest</span>
+            </h3>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-400" id="manifest-count">3 Booked</span>
+              <button type="button" onclick="openAdminModal()" class="text-[10px] font-bold text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 px-2 py-1 rounded-md transition-colors">
+                Manage Payments
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-800 -mx-1 sm:mx-0">
+            <table class="w-full text-left text-xs whitespace-nowrap sm:whitespace-normal">
+              <thead class="bg-slate-950 text-slate-400 font-bold border-b border-slate-800">
+                <tr>
+                  <th class="py-2.5 px-2.5 sm:px-3">Seat</th>
+                  <th class="py-2.5 px-2.5 sm:px-3">1. Name</th>
+                  <th class="py-2.5 px-2.5 sm:px-3">2. Category</th>
+                  <th class="py-2.5 px-2.5 sm:px-3">3. Starting Place</th>
+                  <th class="py-2.5 px-2.5 sm:px-3">4. Connect No</th>
+                  <th class="py-2.5 px-2.5 sm:px-3">Payment</th>
+                </tr>
+              </thead>
+              <tbody id="manifestTableBody" class="divide-y divide-slate-800 text-slate-300">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Reservation Form -->
+      <div class="lg:col-span-5" id="bookingFormCard">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 sm:p-6 shadow-xl lg:sticky lg:top-24 space-y-4 sm:space-y-5">
+          
+          <div class="border-b border-slate-800 pb-3">
+            <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="ticket" class="w-5 h-5 text-sky-400"></i>
+              <span>Seat Reservation Form</span>
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">
+              Select seats on the bus diagram and complete the 4 passenger details.
+            </p>
+          </div>
+
+          <!-- Summary Box -->
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 sm:p-4 space-y-2 text-xs">
+            <div class="flex items-center justify-between text-slate-400">
+              <span>Selected Seat(s):</span>
+              <strong id="displaySelectedSeats" class="text-sm font-bold text-sky-400">None</strong>
+            </div>
+            <div class="flex items-center justify-between text-slate-400">
+              <span>Rate Calculation:</span>
+              <span id="displayRateBreakdown" class="text-slate-200">0 × LKR 0</span>
+            </div>
+            <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-white font-bold text-sm">
+              <span>Total Payable:</span>
+              <span id="displayTotal" class="text-lg font-extrabold text-amber-400">LKR 0</span>
+            </div>
+          </div>
+
+          <!-- Form with the 4 Required Fields -->
+          <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-3.5 sm:space-y-4">
+            
+            <!-- 1. Name -->
+            <div>
+              <label for="passengerName" class="block text-xs font-bold text-slate-300 mb-1">
+                1. Name <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="passengerName" required autocomplete="name" placeholder="e.g. K.M. Priyantha Bandara" 
+                class="w-full text-base sm:text-sm px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all">
+            </div>
+
+            <!-- 2. Member / Non Member / Family -->
+            <div>
+              <label for="passengerType" class="block text-xs font-bold text-slate-300 mb-1">
+                2. Member / Non Member / Family <span class="text-rose-500">*</span>
+              </label>
+              <select id="passengerType" required onchange="calculateTotal()" 
+                class="w-full text-base sm:text-sm px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all cursor-pointer">
+                <option value="Member">Member (LKR 2,500)</option>
+                <option value="Family">Family (LKR 2,500)</option>
+                <option value="Non Member">Non Member (LKR 3,000)</option>
+              </select>
+            </div>
+
+            <!-- 3. Starting Place -->
+            <div>
+              <label for="startingPlace" class="block text-xs font-bold text-slate-300 mb-1">
+                3. Starting Place <span class="text-rose-500">*</span>
+              </label>
+              <select id="startingPlace" required 
+                class="w-full text-base sm:text-sm px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all cursor-pointer">
+                <option value="" disabled selected>-- Select Boarding Location --</option>
+                <option value="Bandarawela (5.00am)">Bandarawela (5.00am)</option>
+                <option value="Kumbalwela (5.15am)">Kumbalwela (5.15am)</option>
+                <option value="Ella (5.20am)">Ella (5.20am)</option>
+                <option value="Wellawaya (5.45am)">Wellawaya (5.45am)</option>
+              </select>
+            </div>
+
+            <!-- 4. Connect No -->
+            <div>
+              <label for="contactNo" class="block text-xs font-bold text-slate-300 mb-1">
+                4. Connect No <span class="text-rose-500">*</span>
+              </label>
+              <input type="tel" id="contactNo" required inputmode="tel" autocomplete="tel" placeholder="Phone / WhatsApp (e.g. 077 123 4567)" 
+                pattern="[0-9+ \-]{9,15}"
+                class="w-full text-base sm:text-sm px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn" disabled
+              class="w-full bg-sky-600 hover:bg-sky-500 disabled:bg-slate-800 disabled:text-slate-600 disabled:cursor-not-allowed text-white font-bold py-3.5 sm:py-3 px-4 rounded-xl shadow-lg shadow-sky-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer text-sm active:scale-[0.98]">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Confirm &amp; Sync Reservation</span>
+            </button>
+
+            <!-- Status Banner -->
+            <div id="statusMessage" class="hidden text-xs p-3 rounded-xl border transition-all text-center"></div>
+
+            <div class="pt-2 flex items-center justify-between text-[11px] text-slate-500">
+              <span class="flex items-center gap-1">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                Direct Google Sheet Sync
+              </span>
+              <span>Seats 53-55 Committee</span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Mobile Floating Action Bar (Appears when 1 or more seats selected) -->
+  <div id="mobile-floating-bar" class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 px-4 py-3 shadow-2xl transition-transform duration-300 translate-y-full flex items-center justify-between gap-3">
+    <div>
+      <div class="flex items-center gap-1.5">
+        <span id="mobile-seat-badge" class="px-2 py-0.5 rounded-md bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold font-mono">0 Seats</span>
+        <span id="mobile-total-price" class="text-sm font-extrabold text-amber-400">LKR 0</span>
+      </div>
+      <p id="mobile-seats-list" class="text-[10px] text-slate-400 truncate max-w-[170px] mt-0.5">Tap to proceed</p>
+    </div>
+    <a href="#bookingFormCard" onclick="focusPassengerForm()" class="bg-sky-600 active:bg-sky-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md flex items-center gap-1.5 shrink-0">
+      <span>Proceed</span>
+      <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+    </a>
+  </div>
+
+  <!-- Admin Modal (Login + Payment Management Console) -->
+  <div id="admin-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-slate-900/90">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center font-bold">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-extrabold text-white">Committee Admin Console</h3>
+            <p class="text-[11px] text-slate-400">Payment verification &amp; seat management</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4">
+        
+        <!-- View 1: Login Form (If not logged in) -->
+        <div id="admin-login-view" class="space-y-4 py-4 max-w-sm mx-auto text-center">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/30 mx-auto flex items-center justify-center mb-2">
+            <i data-lucide="lock" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-base font-bold text-white">Organizer Authentication</h4>
+          <p class="text-xs text-slate-400">Enter committee PIN to confirm payments and manage reservations.</p>
+          
+          <form onsubmit="handleAdminLogin(event)" class="space-y-3 pt-2 text-left">
+            <div>
+              <label for="adminPinInput" class="block text-xs font-semibold text-slate-300 mb-1">Admin Password / PIN</label>
+              <input type="password" id="adminPinInput" required placeholder="Default PIN: admin123" 
+                class="w-full text-base sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all">
+            </div>
+            <div id="admin-login-err" class="text-xs text-rose-400 font-semibold hidden">Incorrect password. Please try again.</div>
+            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-amber-500/20 transition-all text-sm flex items-center justify-center gap-2">
+              <i data-lucide="key" class="w-4 h-4"></i>
+              Unlock Admin Console
+            </button>
+            <div class="text-center text-[10px] text-slate-500 pt-1">
+              Hint for organizers: <code class="text-amber-400 font-mono">admin123</code>
+            </div>
+          </form>
+        </div>
+
+        <!-- View 2: Admin Dashboard (If authenticated) -->
+        <div id="admin-dashboard-view" class="hidden space-y-5">
+          
+          <!-- Summary Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3 text-center">
+              <span class="text-[10px] uppercase font-bold text-slate-400 block">Total Seats</span>
+              <div class="text-lg font-black text-white mt-0.5" id="adm-total-booked">0/58</div>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3 text-center">
+              <span class="text-[10px] uppercase font-bold text-emerald-400 block">Paid Seats</span>
+              <div class="text-lg font-black text-emerald-400 mt-0.5" id="adm-total-paid">0</div>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3 text-center">
+              <span class="text-[10px] uppercase font-bold text-amber-400 block">Pending</span>
+              <div class="text-lg font-black text-amber-400 mt-0.5" id="adm-total-pending">0</div>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3 text-center">
+              <span class="text-[10px] uppercase font-bold text-sky-400 block">Paid Collected</span>
+              <div class="text-lg font-black text-sky-400 mt-0.5" id="adm-collected-rev">LKR 0</div>
+            </div>
+          </div>
+
+          <!-- Quick Filters & Actions -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-800">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-semibold text-slate-400">Filter:</span>
+              <select id="admFilterPayment" onchange="renderAdminTable()" class="bg-slate-950 border border-slate-700 text-white rounded-lg text-xs px-2 py-1 focus:ring-1 focus:ring-amber-500">
+                <option value="all">All Bookings</option>
+                <option value="pending">Pending Payment</option>
+                <option value="paid">Paid Confirmed</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="handleAdminLogout()" class="text-xs font-semibold text-rose-400 hover:text-rose-300 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 px-2.5 py-1 rounded-lg transition-colors">
+                Logout
+              </button>
+            </div>
+          </div>
+
+          <!-- Admin Passenger Table -->
+          <div class="overflow-x-auto rounded-xl border border-slate-800">
+            <table class="w-full text-left text-xs whitespace-nowrap">
+              <thead class="bg-slate-950 text-slate-400 font-bold border-b border-slate-800">
+                <tr>
+                  <th class="py-2.5 px-3">Seat</th>
+                  <th class="py-2.5 px-3">Passenger</th>
+                  <th class="py-2.5 px-3">Contact</th>
+                  <th class="py-2.5 px-3">Amount</th>
+                  <th class="py-2.5 px-3 text-center">Payment Status</th>
+                  <th class="py-2.5 px-3 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminTableBody" class="divide-y divide-slate-800 text-slate-300">
+                <!-- Dynamically populated in Admin mode -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Help Note -->
+          <div class="text-[11px] text-slate-500 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80 flex items-center gap-2">
+            <i data-lucide="info" class="w-3.5 h-3.5 text-amber-400 shrink-0"></i>
+            <span>Toggling payment status automatically saves locally and keeps manifest view in sync.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-3 sm:p-4 border-t border-slate-800 bg-slate-900/90 flex justify-end">
+        <button type="button" onclick="closeAdminModal()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-300 bg-slate-800 hover:bg-slate-700 transition-colors">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Critical Global State - Declared at top to prevent ReferenceErrors
+    window.selectedSeats = new Set();
+    const selectedSeats = window.selectedSeats;
+
+    const GSHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwDpyiMAtRy1nP2zLjjXfYW74cwwZPDhNf4g64OIIsLgDkFHZhRG981rLutagaSSils/exec";
+
+    const TOTAL_BUS_SEATS = 58;
+    const COMMITTEE_SEATS = [53, 54, 55];
+    const MEMBER_PRICE = 2500;
+    const FAMILY_PRICE = 2500;
+    const NON_MEMBER_PRICE = 3000;
+    const STORAGE_KEY = 'rsc_uva_arugambay_bookings_v3';
+    const ADMIN_PIN = 'admin123';
+    let isAdminAuthenticated = false;
+
+    // Seed default committee reservations
+    let seatBookings = {};
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        seatBookings = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn("Storage read error:", e);
+      seatBookings = {};
+    }
+
+    COMMITTEE_SEATS.forEach(seatNum => {
+      if (!seatBookings[seatNum]) {
+        seatBookings[seatNum] = {
+          name: "Organizing Committee",
+          type: "Committee",
+          startingPlace: "Bandarawela (5.00am)",
+          contactNo: "Official",
+          amount: 0,
+          paymentStatus: "Paid",
+          locked: true
+        };
+      }
+    });
+
+    // Save helper
+    function persistBookings() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(seatBookings));
+      } catch (err) {
+        console.warn('Storage save notice:', err);
+      }
+    }
+
+    function focusPassengerForm() {
+      const nameInput = document.getElementById('passengerName');
+      if (nameInput) {
+        setTimeout(() => nameInput.focus(), 300);
+      }
+    }
+
+    function renderBusSeats() {
+      const container = document.getElementById('bus-seat-layout');
+      if (!container) return;
+
+      container.innerHTML = '';
+      let seatNum = 1;
+
+      // Rows 1 to 11: 5 seats each (2 left, aisle gap with row number, 3 right) = 55 seats
+      for (let row = 1; row <= 11; row++) {
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'grid grid-cols-[1fr_1fr_24px_1fr_1fr_1fr] sm:grid-cols-[44px_44px_28px_44px_44px_44px] gap-1.5 justify-center items-center';
+
+        // 2 Left seats
+        for (let i = 0; i < 2; i++) {
+          rowDiv.appendChild(createSeatButton(seatNum++));
+        }
+
+        // Aisle column indicator
+        const aisle = document.createElement('div');
+        aisle.className = 'text-center text-[10px] sm:text-xs font-mono font-semibold text-slate-600 select-none';
+        aisle.textContent = row;
+        rowDiv.appendChild(aisle);
+
+        // 3 Right seats
+        for (let i = 0; i < 3; i++) {
+          rowDiv.appendChild(createSeatButton(seatNum++));
+        }
+
+        container.appendChild(rowDiv);
+      }
+
+      // Row 12: Continuous rear deck with remaining seats (56, 57, 58)
+      const lastRowDiv = document.createElement('div');
+      lastRowDiv.className = 'grid grid-cols-[1fr_1fr_24px_1fr_1fr_1fr] sm:grid-cols-[44px_44px_28px_44px_44px_44px] gap-1.5 justify-center items-center pt-1 border-t border-dashed border-slate-800/80';
+
+      lastRowDiv.appendChild(createSeatButton(seatNum++)); // 56
+      lastRowDiv.appendChild(createSeatButton(seatNum++)); // 57
+
+      const lastAisle = document.createElement('div');
+      lastAisle.className = 'text-center text-[10px] sm:text-xs font-mono font-semibold text-slate-600 select-none';
+      lastAisle.textContent = '12';
+      lastRowDiv.appendChild(lastAisle);
+
+      lastRowDiv.appendChild(createSeatButton(seatNum++)); // 58
+
+      // Visual luggage deck fillers for the rear corners
+      const filler1 = document.createElement('div');
+      filler1.className = 'h-10 sm:h-11 rounded-xl bg-slate-900/50 border border-slate-800/50 flex items-center justify-center text-[10px] text-slate-600 select-none';
+      filler1.textContent = '🧳';
+      lastRowDiv.appendChild(filler1);
+
+      const filler2 = document.createElement('div');
+      filler2.className = 'h-10 sm:h-11 rounded-xl bg-slate-900/50 border border-slate-800/50 flex items-center justify-center text-[10px] text-slate-600 select-none';
+      filler2.textContent = '🧳';
+      lastRowDiv.appendChild(filler2);
+
+      container.appendChild(lastRowDiv);
+
+      updateHeaderDeckStats();
+      renderManifest();
+    }
+
+    function createSeatButton(seatNumber) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'h-10 sm:h-11 rounded-xl font-bold font-mono text-xs flex flex-col items-center justify-center transition-all duration-150 select-none relative';
+
+      const isCommittee = COMMITTEE_SEATS.includes(seatNumber);
+      const isBooked = !!seatBookings[seatNumber];
+      const isSelected = selectedSeats.has(seatNumber);
+
+      if (isCommittee) {
+        btn.className += ' bg-amber-500/20 border border-amber-500/50 text-amber-300 cursor-not-allowed opacity-90';
+        btn.title = `Seat ${seatNumber} (Committee Reserved)`;
+        btn.innerHTML = `<span>#${seatNumber}</span><span class="text-[9px] text-amber-400 leading-none">★</span>`;
+        btn.disabled = true;
+      } else if (isBooked) {
+        btn.className += ' bg-slate-800 border border-slate-700 text-slate-500 cursor-not-allowed opacity-80';
+        const passenger = seatBookings[seatNumber]?.name || 'Booked';
+        btn.title = `Seat ${seatNumber} - Booked by ${passenger}`;
+        btn.innerHTML = `<span>#${seatNumber}</span><span class="text-[8px] text-slate-500 leading-none truncate max-w-[36px]">✕</span>`;
+        btn.disabled = true;
+      } else if (isSelected) {
+        btn.className += ' bg-sky-500 border-2 border-white text-slate-950 shadow-md shadow-sky-500/40 scale-105 z-10';
+        btn.innerHTML = `<span>#${seatNumber}</span><span class="text-[9px] font-black leading-none">✓</span>`;
+        btn.onclick = () => toggleSeatSelection(seatNumber);
+      } else {
+        btn.className += ' bg-emerald-600/90 hover:bg-emerald-500 border border-emerald-500 text-white shadow-sm active:scale-95 cursor-pointer';
+        btn.innerHTML = `<span>#${seatNumber}</span><span class="text-[9px] text-emerald-200 leading-none font-sans font-normal">Open</span>`;
+        btn.onclick = () => toggleSeatSelection(seatNumber);
+      }
+
+      return btn;
+    }
+
+    function toggleSeatSelection(seatNumber) {
+      if (COMMITTEE_SEATS.includes(seatNumber) || seatBookings[seatNumber]) {
+        return;
+      }
+      if (selectedSeats.has(seatNumber)) {
+        selectedSeats.delete(seatNumber);
+      } else {
+        selectedSeats.add(seatNumber);
+      }
+      renderBusSeats();
+      calculateTotal();
+    }
+
+    function calculateTotal() {
+      const type = document.getElementById('passengerType')?.value || 'Member';
+      const count = selectedSeats.size;
+      const unitPrice = (type === 'Member' || type === 'Family') ? MEMBER_PRICE : NON_MEMBER_PRICE;
+      const total = count * unitPrice;
+      const sortedSeats = Array.from(selectedSeats).sort((a, b) => a - b);
+
+      const displaySeats = document.getElementById('displaySelectedSeats');
+      const displayBreakdown = document.getElementById('displayRateBreakdown');
+      const displayTot = document.getElementById('displayTotal');
+      const submitBtn = document.getElementById('submitBtn');
+
+      if (displaySeats) {
+        displaySeats.textContent = sortedSeats.length > 0 ? sortedSeats.map(s => `#${s}`).join(', ') : 'None';
+      }
+      if (displayBreakdown) {
+        displayBreakdown.textContent = `${count} × LKR ${unitPrice.toLocaleString()}`;
+      }
+      if (displayTot) {
+        displayTot.textContent = `LKR ${total.toLocaleString()}`;
+      }
+      if (submitBtn) {
+        submitBtn.disabled = (count === 0);
+      }
+
+      // Sync mobile floating action bar
+      const mobileBar = document.getElementById('mobile-floating-bar');
+      const mobileBadge = document.getElementById('mobile-seat-badge');
+      const mobileTotal = document.getElementById('mobile-total-price');
+      const mobileList = document.getElementById('mobile-seats-list');
+
+      if (mobileBar) {
+        if (count > 0) {
+          mobileBar.classList.remove('translate-y-full');
+          if (mobileBadge) mobileBadge.textContent = `${count} Seat${count > 1 ? 's' : ''}`;
+          if (mobileTotal) mobileTotal.textContent = `LKR ${total.toLocaleString()}`;
+          if (mobileList) mobileList.textContent = `Selected: ${sortedSeats.map(s => '#' + s).join(', ')}`;
+        } else {
+          mobileBar.classList.add('translate-y-full');
+        }
+      }
+    }
+
+    function renderManifest() {
+      const tbody = document.getElementById('manifestTableBody');
+      const countBadge = document.getElementById('manifest-count');
+      if (!tbody) return;
+
+      tbody.innerHTML = '';
+      const bookedSeatNumbers = Object.keys(seatBookings).map(Number).sort((a, b) => a - b);
+      
+      if (countBadge) {
+        countBadge.textContent = `${bookedSeatNumbers.length} Reserved`;
+      }
+
+      if (bookedSeatNumbers.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="py-4 text-center text-slate-500">No seats reserved yet.</td></tr>`;
+        return;
+      }
+
+      bookedSeatNumbers.forEach(s => {
+        const item = seatBookings[s];
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-800/40 transition-colors';
+
+        let badgeColor = 'bg-sky-500/20 text-sky-300 border-sky-500/30';
+        if (item.type === 'Non Member') badgeColor = 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+        if (item.type === 'Family') badgeColor = 'bg-rose-500/20 text-rose-300 border-rose-500/30';
+        if (item.type === 'Committee') badgeColor = 'bg-amber-500/30 text-amber-200 border-amber-400/50';
+
+        const isPaid = (item.paymentStatus === 'Paid' || item.type === 'Committee');
+        const paymentBadge = isPaid
+          ? `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Paid
+             </span>`
+          : `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Pending
+             </span>`;
+
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-mono font-bold text-sky-400">#${s}</td>
+          <td class="py-2 px-3 font-semibold text-white">${item.name}</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold border ${badgeColor}">
+              ${item.type}
+            </span>
+          </td>
+          <td class="py-2 px-3 text-slate-300">${item.startingPlace || '--'}</td>
+          <td class="py-2 px-3 font-mono text-slate-400">${item.contactNo || '--'}</td>
+          <td class="py-2 px-3">${paymentBadge}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function updateHeaderDeckStats() {
+      const bookedCount = Object.keys(seatBookings).length;
+      const freeCount = TOTAL_BUS_SEATS - bookedCount;
+      const deckStats = document.getElementById('deck-stats');
+      if (deckStats) {
+        deckStats.innerText = `${freeCount}/58 Seats Available`;
+      }
+    }
+
+    async function handleBookingSubmit(e) {
+      e.preventDefault();
+
+      if (selectedSeats.size === 0) {
+        showMessage('Please click at least one available seat on the bus diagram.', 'error');
+        return;
+      }
+
+      const name = document.getElementById('passengerName').value.trim();
+      const type = document.getElementById('passengerType').value;
+      const startingPlace = document.getElementById('startingPlace').value;
+      const contactNo = document.getElementById('contactNo').value.trim();
+      const submitBtn = document.getElementById('submitBtn');
+
+      if (!name || !type || !startingPlace || !contactNo) {
+        showMessage('Please fill in all 4 mandatory fields.', 'error');
+        return;
+      }
+
+      const seatsArr = Array.from(selectedSeats).sort((a, b) => a - b);
+      let unitPrice = (type === 'Member' || type === 'Family') ? MEMBER_PRICE : NON_MEMBER_PRICE;
+
+      submitBtn.disabled = true;
+      showMessage('Syncing reservation to Google Sheet...', 'loading');
+
+      // 1. Update local cache with default Pending status
+      seatsArr.forEach(seat => {
+        seatBookings[seat] = {
+          name: name,
+          type: type,
+          startingPlace: startingPlace,
+          contactNo: contactNo,
+          amount: unitPrice,
+          paymentStatus: "Pending",
+          bookedAt: new Date().toISOString()
+        };
+      });
+
+      persistBookings();
+
+      // 2. Dispatch to Google Sheets Apps Script Webhook
+      try {
+        for (let seat of seatsArr) {
+          const payload = {
+            seatNumber: seat,
+            passengerName: name,
+            category: type,
+            startingPlace: startingPlace,
+            connectNo: contactNo,
+            amount: unitPrice,
+            paymentStatus: "Pending"
+          };
+
+          await fetch(GSHEET_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        }
+
+        showMessage(`✓ Seat(s) ${seatsArr.join(', ')} successfully reserved and sent to Google Sheet!`, 'success');
+      } catch (networkErr) {
+        console.warn('Google Sheet fetch error:', networkErr);
+        showMessage(`✓ Seat(s) ${seatsArr.join(', ')} reserved locally!`, 'success');
+      }
+
+      // Reset selection and form inputs
+      selectedSeats.clear();
+      document.getElementById('passengerName').value = '';
+      document.getElementById('contactNo').value = '';
+      document.getElementById('startingPlace').value = '';
+
+      renderBusSeats();
+      calculateTotal();
+
+      setTimeout(() => {
+        const msg = document.getElementById('statusMessage');
+        if (msg) msg.classList.add('hidden');
+      }, 7000);
+    }
+
+    /* Admin Authentication & Management Functions */
+    function openAdminModal() {
+      const modal = document.getElementById('admin-modal');
+      const loginView = document.getElementById('admin-login-view');
+      const dashView = document.getElementById('admin-dashboard-view');
+      const errBox = document.getElementById('admin-login-err');
+
+      if (!modal) return;
+      if (errBox) errBox.classList.add('hidden');
+
+      if (isAdminAuthenticated) {
+        loginView.classList.add('hidden');
+        dashView.classList.remove('hidden');
+        renderAdminDashboard();
+      } else {
+        loginView.classList.remove('hidden');
+        dashView.classList.add('hidden');
+        setTimeout(() => {
+          const pin = document.getElementById('adminPinInput');
+          if (pin) pin.focus();
+        }, 150);
+      }
+
+      modal.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeAdminModal() {
+      const modal = document.getElementById('admin-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const input = document.getElementById('adminPinInput');
+      const errBox = document.getElementById('admin-login-err');
+      const loginView = document.getElementById('admin-login-view');
+      const dashView = document.getElementById('admin-dashboard-view');
+      const navLabel = document.getElementById('navAdminLabel');
+
+      if (!input) return;
+      if (input.value.trim() === ADMIN_PIN) {
+        isAdminAuthenticated = true;
+        if (errBox) errBox.classList.add('hidden');
+        input.value = '';
+        if (navLabel) navLabel.textContent = 'Admin (Active)';
+        
+        loginView.classList.add('hidden');
+        dashView.classList.remove('hidden');
+        renderAdminDashboard();
+      } else {
+        if (errBox) errBox.classList.remove('hidden');
+      }
+    }
+
+    function handleAdminLogout() {
+      isAdminAuthenticated = false;
+      const navLabel = document.getElementById('navAdminLabel');
+      if (navLabel) navLabel.textContent = 'Admin';
+      closeAdminModal();
+    }
+
+    function renderAdminDashboard() {
+      const bookedKeys = Object.keys(seatBookings).map(Number);
+      const totalBooked = bookedKeys.length;
+      
+      let paidSeats = 0;
+      let pendingSeats = 0;
+      let collectedRev = 0;
+
+      bookedKeys.forEach(k => {
+        const item = seatBookings[k];
+        if (item.type === 'Committee' || item.paymentStatus === 'Paid') {
+          paidSeats++;
+          collectedRev += (item.amount || 0);
+        } else {
+          pendingSeats++;
+        }
+      });
+
+      const elTotal = document.getElementById('adm-total-booked');
+      const elPaid = document.getElementById('adm-total-paid');
+      const elPending = document.getElementById('adm-total-pending');
+      const elRev = document.getElementById('adm-collected-rev');
+
+      if (elTotal) elTotal.textContent = `${totalBooked}/58`;
+      if (elPaid) elPaid.textContent = `${paidSeats}`;
+      if (elPending) elPending.textContent = `${pendingSeats}`;
+      if (elRev) elRev.textContent = `LKR ${collectedRev.toLocaleString()}`;
+
+      renderAdminTable();
+    }
+
+    function renderAdminTable() {
+      const tbody = document.getElementById('adminTableBody');
+      const filter = document.getElementById('admFilterPayment')?.value || 'all';
+      if (!tbody) return;
+
+      tbody.innerHTML = '';
+      const bookedKeys = Object.keys(seatBookings).map(Number).sort((a, b) => a - b);
+
+      const filteredKeys = bookedKeys.filter(k => {
+        const item = seatBookings[k];
+        const isPaid = (item.paymentStatus === 'Paid' || item.type === 'Committee');
+        if (filter === 'paid') return isPaid;
+        if (filter === 'pending') return !isPaid;
+        return true;
+      });
+
+      if (filteredKeys.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="py-4 text-center text-slate-500">No matching reservations found.</td></tr>`;
+        return;
+      }
+
+      filteredKeys.forEach(seat => {
+        const item = seatBookings[seat];
+        const isCommittee = COMMITTEE_SEATS.includes(seat);
+        const isPaid = (item.paymentStatus === 'Paid' || isCommittee);
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-800/40 transition-colors';
+
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-mono font-bold text-sky-400">#${seat}</td>
+          <td class="py-2.5 px-3">
+            <div class="font-semibold text-white leading-tight">${item.name}</div>
+            <div class="text-[10px] text-slate-400">${item.type} &bull; ${item.startingPlace || 'Boarding N/A'}</div>
+          </td>
+          <td class="py-2.5 px-3 font-mono text-slate-300">${item.contactNo || '--'}</td>
+          <td class="py-2.5 px-3 font-bold text-amber-400 font-mono">LKR ${(item.amount || 0).toLocaleString()}</td>
+          <td class="py-2.5 px-3 text-center">
+            ${isCommittee ? 
+              `<span class="px-2 py-1 rounded-md text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">Committee</span>` :
+              `<button type="button" onclick="togglePaymentStatus(${seat})" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all active:scale-95 ${
+                isPaid ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30'
+              }">
+                <span class="w-1.5 h-1.5 rounded-full ${isPaid ? 'bg-emerald-400' : 'bg-amber-400'}"></span>
+                <span>${isPaid ? 'Paid' : 'Pending'}</span>
+              </button>`
+            }
+          </td>
+          <td class="py-2.5 px-3 text-right">
+            ${isCommittee ?
+              `<span class="text-[10px] text-slate-500 italic">Locked</span>` :
+              `<div class="inline-flex items-center gap-1.5">
+                <button type="button" onclick="togglePaymentStatus(${seat})" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-[10px] font-bold border border-slate-700">
+                  ${isPaid ? 'Mark Pending' : 'Mark Paid'}
+                </button>
+                <button type="button" onclick="cancelSeatBooking(${seat})" class="px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-[10px] font-bold border border-rose-500/30" title="Release seat">
+                  Cancel
+                </button>
+              </div>`
+            }
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    async function togglePaymentStatus(seatNo) {
+      if (COMMITTEE_SEATS.includes(seatNo)) return;
+      if (!seatBookings[seatNo]) return;
+
+      const current = seatBookings[seatNo].paymentStatus;
+      const nextStatus = current === 'Paid' ? 'Pending' : 'Paid';
+      seatBookings[seatNo].paymentStatus = nextStatus;
+
+      persistBookings();
+      renderBusSeats();
+      renderAdminDashboard();
+
+      // Background sync updated payment status to Google Sheet
+      try {
+        await fetch(GSHEET_WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            seatNumber: seatNo,
+            passengerName: seatBookings[seatNo].name,
+            category: seatBookings[seatNo].type,
+            startingPlace: seatBookings[seatNo].startingPlace,
+            connectNo: seatBookings[seatNo].contactNo,
+            amount: seatBookings[seatNo].amount,
+            paymentStatus: nextStatus
+          })
+        });
+      } catch (err) {
+        console.warn('Google Sheet payment status update notice:', err);
+      }
+    }
+
+    function cancelSeatBooking(seatNo) {
+      if (COMMITTEE_SEATS.includes(seatNo)) return;
+      if (!seatBookings[seatNo]) return;
+
+      const passenger = seatBookings[seatNo].name;
+      // Using in-app confirm via window or direct action
+      delete seatBookings[seatNo];
+      persistBookings();
+      renderBusSeats();
+      renderAdminDashboard();
+      calculateTotal();
+    }
+
+    function showMessage(text, status) {
+      const msg = document.getElementById('statusMessage');
+      if (!msg) return;
+
+      msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/30',
+        'bg-rose-500/20', 'text-rose-300', 'border-rose-500/30',
+        'bg-sky-500/20', 'text-sky-300', 'border-sky-500/30');
+
+      if (status === 'success') {
+        msg.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/30');
+      } else if (status === 'loading') {
+        msg.classList.add('bg-sky-500/20', 'text-sky-300', 'border-sky-500/30');
+      } else {
+        msg.classList.add('bg-rose-500/20', 'text-rose-300', 'border-rose-500/30');
+      }
+
+      msg.innerText = text;
+    }
+
+    // Startup initialization
+    window.addEventListener('DOMContentLoaded', () => {
+      renderBusSeats();
+      calculateTotal();
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
